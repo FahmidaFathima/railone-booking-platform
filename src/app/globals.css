@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background-color: #0b1120;
+  color: #f1f5f9;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Animation utilities */
+@keyframes slide-in-from-top-1 {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: slide-in-from-top-1 0.2s ease-out;
+}
+
+.slide-in-from-top-1 {
+  animation-name: slide-in-from-top-1;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(245, 158, 11, 0.3);
+  color: #f8fafc;
+}
